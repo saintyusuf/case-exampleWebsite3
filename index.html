@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- CUSTOM -->
+  <link rel="stylesheet" href="src/css/style.css?v1.3">
+  <title>Case - Digifist</title>
+</head>
+<body>
+  
+  <div class="container">
+
+    <div class="container-part container-part-image">
+      <img src="src/assets/images/main.png">
+    </div>
+
+    <div class="container-part container-part-content">
+
+      <div class="texts">
+        <h1 class="title-desktop">Everyday items, we have something to suit every occasion.</h1>
+        <h1 class="title-mobile">Everyday tops, we have something to suit every occasion.</h1>
+        <p class="description">At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.</p>
+        <p class="title-slider">Shop all everyday items</p>
+      </div>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="src/assets/images/slider/1.png">
+            <p>365 Signature Hoodie</p>
+            <div class="bottom">
+              <p>€33.95</p>
+              <div class="colors">
+                <div class="color selected">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/assets/images/slider/2.png">
+            <p>Organic Skinny High Waist Jeans</p>
+            <div class="bottom">
+              <p>€33.95</p>
+              <div class="colors">
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color selected">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/assets/images/slider/3.png">
+            <p>Organic Skinny High Waist Jeans</p>
+            <div class="bottom">
+              <p>€33.95</p>
+              <div class="colors">
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color selected">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/assets/images/slider/1.png">
+            <p>365 Signature Hoodie</p>
+            <div class="bottom">
+              <p>€33.95</p>
+              <div class="colors">
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color selected">
+                  <div class="color-inside"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/assets/images/slider/2.png">
+            <p>Organic Skinny High Waist Jeans</p>
+            <div class="bottom">
+              <p>€33.95</p>
+              <div class="colors">
+                <div class="color selected">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="src/assets/images/slider/3.png">
+            <p>Organic Skinny High Waist Jeans</p>
+            <div class="bottom">
+              <p>€33.95</p>
+              <div class="colors">
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color selected">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+                <div class="color">
+                  <div class="color-inside"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      
+    </div>
+  
+  </div>
+
+  <div class="intro">
+    <p>
+      <span>case-digifist</span>
+      <span>.saintyusuf.com</span>
+    </p>
+  </div>
+
+  <!-- SWIPER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- SPLIT-TYPE -->
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+  <!-- CUSTOM -->
+  <script type="module">
+
+    // CHANGE COLOR ON CLICK
+
+    document.querySelectorAll(".color").forEach(color => {
+      
+      color.addEventListener("click", (e) => {
+        
+        const colors = e.target.parentElement.parentElement.querySelectorAll(".color")
+        colors.forEach(color => {
+          color !== e.target ? color.classList.remove("selected") : null
+        })
+        e.target.classList.add("selected")
+
+      })
+      
+    })
+    
+    // SWIPER INIT
+    
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+  
+    const swiper = new Swiper(".swiper", {
+      speed: 300,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: "auto",
+          spaceBetween: 13,
+        },
+        800: {
+          slidesPerView: "auto",
+          spaceBetween: 30,
+        }
+      }
+    })
+
+    // GSAP ANIMATIONS
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const tl = gsap.timeline()
+
+      const introSecondTextSplitted = new SplitType(".intro p span:last-of-type", {
+        types: "chars",
+        tagName: "span"
+      })
+
+      const titleDesktopSplitted = new SplitType(".title-desktop", {
+        types: "chars",
+        tagName: "span"
+      })
+
+      const titleMobileSplitted = new SplitType(".title-mobile", {
+        types: "chars",
+        tagName: "span"
+      })
+
+      const titleDescriptionSplitted = new SplitType(".description", {
+        types: "chars",
+        tagName: "span"
+      })
+
+      const titleSliderSplitted = new SplitType(".title-slider", {
+        types: "chars",
+        tagName: "span"
+      })
+
+      // INTRO
+
+      tl.set(".intro p", {
+        opacity: 1
+      })
+      
+      tl.fromTo(".intro p", {
+        top: "100%",
+        scale: 0.25
+      },{
+        duration: 1.5,
+        ease: "power4.out",
+        top: "50%",
+        scale: 1
+      })
+
+      tl.from(introSecondTextSplitted.chars, {
+        duration: 0.1,
+        ease: "power3.in",
+        opacity: 0,
+        y: 5,
+        stagger: 0.05
+      }, "-=0.25")
+      
+      tl.from(".intro p span:last-of-type", {
+        duration: 0.75,
+        ease: "power3.in",
+        width: 0,
+      }, "<")
+      
+      tl.to(".intro p", {
+        duration: 0.4,
+        ease: "power3.out",
+        scale: 1.5
+      }, "+=1")
+
+      tl.to(".intro p", {
+        duration: 0.7,
+        ease: "power2.in",
+        scale: 0
+      }, "-=0.1")
+
+      tl.to(".intro", {
+        duration: 1.5,
+        ease: "power4.out",
+        top: window.innerWidth < 800 ? "100vh" : 0,
+        left: window.innerWidth > 800 ? "100vw" : 0,
+      })
+
+      // PAGE CONTENT
+
+      tl.from(".container-part-image img", {
+        duration: 3,
+        ease: "power4.out",
+        scale: 1.75,
+      }, "<")
+
+      tl.from(titleDesktopSplitted.chars, {
+        duration: 0.1,
+        ease: "power4.out",
+        stagger: 0.03,
+        opacity: 0,
+      }, "<")
+
+      tl.from(titleMobileSplitted.chars, {
+        duration: 0.1,
+        ease: "power4.out",
+        stagger: 0.03,
+        opacity: 0,
+      }, "<")
+
+      tl.from(titleDescriptionSplitted.chars, {
+        duration: 0.1,
+        ease: "power4.out",
+        stagger: 0.02,
+        opacity: 0,
+      }, "<")
+
+      tl.from(titleSliderSplitted.chars, {
+        duration: 0.1,
+        ease: "power4.out",
+        stagger: 0.03,
+        opacity: 0,
+      }, "<")
+
+      tl.from(".title-slider", {
+        duration: 1,
+        ease: "power1.in",
+        borderColor: "#fff",
+        width: 0,
+      }, "<")
+
+      tl.from(".swiper-slide", {
+        duration: 0.5,
+        ease: "power1.in",
+        opacity: 0,
+        stagger: 0.5,
+      }, "<")
+
+      tl.from(".swiper-button-prev, .swiper-button-next", {
+        duration: 0.25,
+        ease: "power1.in",
+        opacity: 0,
+      }, "<")
+      
+    })
+    
+  </script>
+  
+</body>
+</html>

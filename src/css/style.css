@@ -1,0 +1,330 @@
+@font-face{
+  font-family: 'ITC Avant Garde Gothic LT Bold';
+  src: url("../assets/fonts/ITCAvantGardeGothicLTBold.otf");
+}
+
+@font-face{
+  font-family: 'Avenir Heavy';
+  src: url("../assets/fonts/AvenirHeavy.ttf");
+}
+
+@font-face{
+  font-family: 'Avenir Book';
+  src: url("../assets/fonts/AvenirBook.ttf");
+}
+
+@font-face{
+  font-family: 'Avenir Medium';
+  src: url("../assets/fonts/AvenirMedium.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+}
+
+.container-part{
+  width: 50%;
+  position: relative;
+}
+
+.container-part-image{
+  overflow: hidden;
+}
+
+.container-part-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-part-content{
+  display: flex;
+  flex-direction: column;
+  padding-left: 120px;
+  padding-top: 100px;
+}
+
+.container-part-content .texts {
+  margin-bottom: 65px;
+  width: 70%;
+}
+
+.container-part-content .texts h1{
+  font-family: ITC Avant Garde Gothic LT Bold;
+  margin-bottom: 20px;
+}
+
+.container-part-content .texts h1.title-desktop{
+  display: block;
+  font-size: 31px;
+  line-height: 1.3;
+}
+
+.container-part-content .texts h1.title-mobile{
+  display: none;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 22px;
+}
+
+.container-part-content .texts p.description{
+  display: block;
+  font-family: Avenir Book;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #888;
+  margin-bottom: 35px;
+}
+
+.container-part-content .texts p.title-slider{
+  font-family: Avenir Heavy;
+  font-size: 12.5px;
+  line-height: 1.5;
+  width: fit-content;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px){
+  .container{
+    flex-direction: column;
+  }
+
+  .container-part{
+    width: 100%;
+  }
+
+  .container-part-image::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-shadow: inset 0 -225px 50px -50px #00000066;
+  }
+
+  .container-part-content{
+    padding: 0;
+    margin-top: -190px;
+  }
+
+  .container-part-content .texts{
+    margin: 0 22px 30px 22px;
+    width: 85%;
+  }
+
+  .container-part-content .texts h1.title-desktop{
+    display: none;
+  }
+
+  .container-part-content .texts h1.title-mobile{
+    display: block;
+  }
+
+  .container-part-content .texts p.description{
+    display: none;
+  }
+
+  .container-part-content .texts p.title-slider{
+    font-family: Avenir Heavy;
+    color: #fff;
+    border-color: #fff;
+    font-size: 13px;
+  }
+}
+
+/* SWIPER */
+.swiper{
+  width: 100%;
+  padding-right: 30px;
+}
+
+.swiper-slide{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  user-select: none;
+}
+
+.swiper-slide img{
+  width: 230px;
+  height: 310px;
+  margin-bottom: 10px;
+}
+
+.swiper-slide > p{
+  font-family: Avenir Book;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.swiper-slide .bottom{
+  display: flex;
+}
+
+.swiper-slide .bottom p{
+  font-family: Avenir Book;
+  font-size: 13px;
+  height: 20px;
+}
+
+.swiper-slide .bottom .colors{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.swiper-slide .bottom .colors .color{
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.swiper-slide .bottom .colors .color.selected{
+  padding: 2px;
+  border: 1px solid #000;
+}
+
+.swiper-slide .bottom .colors .color .color-inside{
+  pointer-events: none;
+}
+
+.swiper-slide .bottom .colors .color:nth-child(1) .color-inside{
+  background: #99C3CC;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.swiper-slide .bottom .colors .color:nth-child(2) .color-inside{
+  background: #CC9999;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.swiper-slide .bottom .colors .color:nth-child(3) .color-inside{
+  background: #CB99CC;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.swiper-slide .bottom .colors .color:nth-child(4) .color-inside{
+  background: #A6CC99;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.swiper-slide .bottom .colors .color:first-of-type{
+  margin-left: 0;
+}
+
+.swiper-slide .bottom .colors .color:last-of-type{
+  margin-right: 0;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  top: calc((100% - 55px) / 2);
+}
+
+.swiper-button-next{
+  right: 45px;
+}
+
+.swiper-button-prev{
+  left: 45px;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+  font-size: 15px;
+  color: #333;
+} 
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  display: none;
+}
+
+@media (max-width: 800px){
+  .swiper{
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 22px;
+  }
+
+  .swiper-slide img{
+    width: 148px;
+    height: 200px;
+  }
+
+  .swiper-button-next, .swiper-button-prev{
+    display: none;
+  }
+
+  .swiper-slide > p{
+    height: 40px;
+    width: 148px;
+  }
+
+  .swiper-slide .bottom{
+    flex-direction: column;
+  }
+
+  .swiper-slide .bottom .colors{
+    margin-left: 0;
+    margin-top: 6px;
+  }
+
+  .swiper-slide .bottom .colors .color{
+    margin: 0 3px
+  }
+}
+
+/* INTRO */
+.intro{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.intro p{
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-family: Avenir Heavy;
+  white-space: nowrap;
+  display: inline-flex;
+  opacity: 0;
+}
+
+@media (max-width: 800px){
+  .intro p{
+    font-size: 20px;
+  }
+}
